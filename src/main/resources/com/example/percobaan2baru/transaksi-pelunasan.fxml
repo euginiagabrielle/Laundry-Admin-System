@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="720.0" prefWidth="1072.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.percobaan2baru.TransaksiPelunasanController">
+    <children>
+        <BorderPane layoutX="-9.0" prefHeight="91.0" prefWidth="1090.0" style="-fx-background-color: CornflowerBlue;">
+            <center>
+                <Label text="Pelunasan" textFill="WHITE" BorderPane.alignment="CENTER">
+                    <font>
+                        <Font name="System Bold" size="30.0" />
+                    </font>
+                </Label>
+            </center>
+            <bottom>
+                <AnchorPane prefHeight="0.0" prefWidth="1090.0" style="-fx-background-color: Gainsboro;" BorderPane.alignment="CENTER">
+                    <children>
+                        <Label layoutX="388.0" layoutY="2.0" textFill="CORNFLOWERBLUE">
+                            <font>
+                                <Font name="System Bold" size="12.0" />
+                            </font>
+                        </Label>
+                    </children></AnchorPane>
+            </bottom>
+        </BorderPane>
+        <Button fx:id="btnOkLunas" layoutX="926.0" layoutY="651.0" mnemonicParsing="false" onAction="#onBtnCekClick" prefHeight="38.0" prefWidth="101.0" style="-fx-background-color: mediumseagreen;" text="OK" textFill="WHITE">
+            <font>
+                <Font name="System Bold" size="14.0" />
+            </font>
+        </Button>
+        <Label layoutX="46.0" layoutY="135.0" text="ID Transaksi">
+            <font>
+                <Font name="System Bold" size="15.0" />
+            </font>
+        </Label>
+        <Button fx:id="btnBack" layoutX="57.0" layoutY="651.0" mnemonicParsing="false" onAction="#onBtnBackClick" prefHeight="38.0" prefWidth="101.0" style="-fx-background-color: CornflowerBlue;" text="Back" textFill="WHITE">
+            <font>
+                <Font name="System Bold" size="14.0" />
+            </font>
+        </Button>
+        <Label layoutX="43.0" layoutY="241.0" text="DP :">
+            <font>
+                <Font name="System Bold" size="15.0" />
+            </font>
+        </Label>
+        <Label layoutX="43.0" layoutY="188.0" text="Total Harga :">
+            <font>
+                <Font name="System Bold" size="15.0" />
+            </font>
+        </Label>
+        <Label fx:id="labelTotalHarga" layoutX="172.0" layoutY="183.0" prefHeight="30.0" prefWidth="192.0">
+            <font>
+                <Font size="14.0" />
+            </font>
+        </Label>
+        <Label fx:id="labelCek" alignment="CENTER" layoutX="378.0" layoutY="655.0" prefHeight="30.0" prefWidth="325.0">
+            <font>
+                <Font size="14.0" />
+            </font>
+        </Label>
+        <ComboBox fx:id="inputIdTransaksi" layoutX="172.0" layoutY="125.0" onKeyPressed="#onIdExit" prefHeight="38.0" prefWidth="192.0" style="-fx-background-color: white; -fx-border-color: gainsboro;" />
+      <Label fx:id="labelDP" layoutX="172.0" layoutY="237.0" prefHeight="30.0" prefWidth="192.0">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="43.0" layoutY="293.0" text="Pelunasan :">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Label>
+      <Label fx:id="labelPelunasan" layoutX="172.0" layoutY="289.0" prefHeight="30.0" prefWidth="192.0">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Button fx:id="btnCLear" layoutX="802.0" layoutY="651.0" mnemonicParsing="false" onAction="#onBtnClearClick" prefHeight="38.0" prefWidth="101.0" style="-fx-background-color: OrangeRed;" text="CLEAR" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Button>
+    </children>
+</AnchorPane>

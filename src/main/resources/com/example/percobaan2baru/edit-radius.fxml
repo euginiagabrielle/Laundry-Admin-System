@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="720.0" prefWidth="1080.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.percobaan2baru.EditRadiusController">
+    <children>
+        <BorderPane layoutX="-9.0" prefHeight="91.0" prefWidth="1090.0" style="-fx-background-color: CornflowerBlue;">
+            <center>
+                <Label text="Radius" textFill="WHITE" BorderPane.alignment="CENTER">
+                    <font>
+                        <Font name="System Bold" size="30.0" />
+                    </font>
+                </Label>
+            </center>
+            <bottom>
+                <AnchorPane prefHeight="0.0" prefWidth="1090.0" style="-fx-background-color: Gainsboro;" BorderPane.alignment="CENTER">
+                    <children>
+                        <Label layoutX="388.0" layoutY="2.0" textFill="CORNFLOWERBLUE">
+                            <font>
+                                <Font name="System Bold" size="12.0" />
+                            </font>
+                        </Label>
+                    </children></AnchorPane>
+            </bottom>
+        </BorderPane>
+        <TableView fx:id="tabelRadius" layoutX="57.0" layoutY="213.0" onMouseClicked="#selectedRow" onSort="#selectedRow" prefHeight="420.0" prefWidth="977.0">
+            <columns>
+                <TableColumn fx:id="columnID" prefWidth="101.0" text="ID" />
+                <TableColumn fx:id="columnMinRadius" prefWidth="306.0" text="Radius Minimal" />
+                <TableColumn fx:id="columnMaxRadius" prefWidth="298.0" text="Radius Maksimal" />
+                <TableColumn fx:id="columnHarga" prefWidth="270.0" text="Harga" />
+            </columns>
+        </TableView>
+        <TextField fx:id="inputMinRadius" layoutX="182.0" layoutY="147.0" prefHeight="38.0" prefWidth="166.0" />
+        <TextField fx:id="inputMaxRadius" layoutX="374.0" layoutY="147.0" prefHeight="38.0" prefWidth="166.0" />
+        <TextField fx:id="inputHarga" layoutX="569.0" layoutY="147.0" prefHeight="38.0" prefWidth="166.0" />
+        <Button fx:id="btnAdd" layoutX="933.0" layoutY="147.0" mnemonicParsing="false" onAction="#onBtnAddClick" onMouseClicked="#selectedRow" prefHeight="38.0" prefWidth="101.0" style="-fx-background-color: mediumseagreen;" text="Add" textFill="WHITE">
+            <font>
+                <Font name="System Bold" size="14.0" />
+            </font>
+        </Button>
+        <Button fx:id="btnUpdate" layoutX="809.0" layoutY="651.0" mnemonicParsing="false" onAction="#onBtnUpdateClick" prefHeight="38.0" prefWidth="101.0" style="-fx-background-color: mediumseagreen;" text="Update" textFill="WHITE">
+            <font>
+                <Font name="System Bold" size="14.0" />
+            </font>
+        </Button>
+        <Button fx:id="btnDelete" layoutX="932.0" layoutY="651.0" mnemonicParsing="false" onAction="#onBtnDeleteClick" prefHeight="38.0" prefWidth="101.0" style="-fx-background-color: orangered;" text="Delete" textFill="WHITE">
+            <font>
+                <Font name="System Bold" size="14.0" />
+            </font>
+        </Button>
+        <Label layoutX="182.0" layoutY="118.0" text="Radius Minimal">
+            <font>
+                <Font name="System Bold" size="12.0" />
+            </font>
+        </Label>
+        <Label layoutX="374.0" layoutY="126.0" text="Radius Maksimal">
+            <font>
+                <Font name="System Bold" size="12.0" />
+            </font>
+        </Label>
+        <Label layoutX="569.0" layoutY="127.0" text="Harga">
+            <font>
+                <Font name="System Bold" size="12.0" />
+            </font>
+        </Label>
+        <Label fx:id="label" alignment="CENTER_RIGHT" layoutX="505.0" layoutY="658.0" prefHeight="25.0" prefWidth="281.0" textAlignment="RIGHT">
+            <font>
+                <Font name="System Italic" size="14.0" />
+            </font></Label>
+        <TextField fx:id="inputID" layoutX="57.0" layoutY="147.0" prefHeight="38.0" prefWidth="101.0" />
+        <Label layoutX="57.0" layoutY="126.0" text="ID">
+            <font>
+                <Font name="System Bold" size="12.0" />
+            </font>
+        </Label>
+        <Button fx:id="btnBack" layoutX="57.0" layoutY="651.0" mnemonicParsing="false" onAction="#onBtnBackClick" onMouseClicked="#selectedRow" prefHeight="38.0" prefWidth="101.0" style="-fx-background-color: CornflowerBlue;" text="Back" textFill="WHITE">
+            <font>
+                <Font name="System Bold" size="14.0" />
+            </font>
+        </Button>
+    </children>
+</AnchorPane>
